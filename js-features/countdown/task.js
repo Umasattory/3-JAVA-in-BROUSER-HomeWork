@@ -36,3 +36,4 @@ let timeDown = setInterval(() => {
    (minute.textContent.length < 2) ? minute.textContent = '0' + minute.textContent : minute.textContent;
    (hour.textContent.length < 2) ? hour.textContent = '0' + hour.textContent : hour.textContent;
 }, 10);
+
