@@ -31,4 +31,3 @@ updatePage.addEventListener('click', () => {
    location.reload();
    return false;
 });
-
