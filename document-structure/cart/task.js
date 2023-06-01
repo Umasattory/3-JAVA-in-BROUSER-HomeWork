@@ -47,9 +47,9 @@ function addToBascet(element) {
 //-------------------поиск на присутствие такой же id в корзине------------------------//
       if (controlArray.includes(prod_id)) {
          const prod_list = Array.from(cartBlock.querySelectorAll('.cart__product'));
-         const b = prod_list.filter((elem) => elem.dataset.id == prod_id);
-         b.querySelector('.cart__product-count').innerText = prod_Quantity_val;
-         console.log(b);
+         const findID_for_val = prod_list.filter((elem) => elem.dataset.id == prod_id);
+         //findID_for-val.querySelector('.cart__product-count').innerText = prod_Quantity_val; //- ПРОБЛЕМА
+         console.log(findID_for_val);
       } else {
 //--------------------------создание клона нового товара--------------------------------//
          controlArray.push(prod_id);
