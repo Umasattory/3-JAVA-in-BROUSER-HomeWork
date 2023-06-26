@@ -104,8 +104,8 @@ function bascetWork(element) {
       } catch (err) {
          console.log("Нулевое значение. Элемент удален с карзины " + err.massege);
       }
-   };
-}
+   }
+};
 
 let locStorData = Object.entries(localStorage);
 function cartBuilt(prodID, prodQunt) {
@@ -122,40 +122,9 @@ function cartBuilt(prodID, prodQunt) {
       const listProds = cart_Block.querySelector('.cart__products');
       listProds.insertBefore(newBlock, null);      
    }
-}
+};
 
 for (let i = 0; i < localStorage.length; i++) {
    const prodID = JSON.parse(locStorData[i][0]), prodValue = JSON.parse(locStorData[i][1])
    cartBuilt(prodID, prodValue);
-}   
-
-
-
-
-/* Вывод товаров из localStorage
-let products = Object.keys(localStorage);
-for (let product of products) {
-   addCart(document.querySelector(`.product[data-id="${product}"]`), localStorage.getItem(product));
-}
-
-const cartList = document.querySelector('.cart__products');
-
-function addCart(element, quantity) {
-   const prodId = element.closest('.product').dataset.id,
-      prodImage = element.closest('.product').querySelector('.product__image'),
-      cartProdQnt = cartList.querySelector(`.cart__product[data-id="${prodId}"] .cart__product-count`);
-
-   // если передано количество товара (для localStorage)
-   const prodQnt = quantity ? quantity : element.closest('.product').querySelector('.product__quantity-value').innerText;
-
-   } else {
-      const cartItem = document.createElement('div');
-      cartItem.className = 'cart__product';
-      cartItem.dataset.id = prodId;
-
-      cartItem.innerHTML = `<img class="cart__product-image" src="${prodImage.src}">
-                            <div class="cart__product-count">${prodQnt}</div>`;
-
-      cartList.appendChild(cartItem);
-   }
-}*/
+};
