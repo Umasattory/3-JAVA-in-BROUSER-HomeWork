@@ -11,9 +11,9 @@ element.dataset.position = "bottom";
 hasTool.forEach((item) => {
    const hintText = item.getAttribute('title');
    item.addEventListener('click', (e) => {
+      e.preventDefault()      
       element.style.display = "none";
       const coordinate = item.getBoundingClientRect();
-      e.preventDefault()
       element.innerText = hintText;
       item.after(element);
       element.classList.toggle('tooltip_active')
