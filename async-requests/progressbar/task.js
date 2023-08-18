@@ -7,6 +7,7 @@ form.addEventListener('submit', (e) => {
    const data = new FormData(form);
 
    const xhr = new XMLHttpRequest();
+   xhr.open('POST', URLServer, data);
 
    xhr.upload.addEventListener('progress', (e) => {
       progress.value = e.loaded / e.total
@@ -17,10 +18,9 @@ form.addEventListener('submit', (e) => {
    })
 
    xhr.upload.addEventListener('error', (e) => {
-      alert('download defult, it was error' + e)
+      alert('download defult, it was error ' + e)
    })
 
-   xhr.open('POST', URLServer, data);
    xhr.setRequestHeader('Content-type', 'aplication/x-www-form-urlencoded');
    xhr.send(JSON.stringify(data));
 });
