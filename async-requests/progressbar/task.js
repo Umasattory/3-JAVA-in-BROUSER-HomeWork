@@ -4,10 +4,10 @@ const URLServer = "https://netology-slow-rest.herokuapp.com/upload.php"
 
 form.addEventListener('submit', (e) => {
    e.preventDefault();
-   const data = new FormData(form);
 
    const xhr = new XMLHttpRequest();
-   xhr.open('POST', URLServer, data);
+   const data = new FormData(form);
+   data.append('file', file[0])
 
    xhr.upload.addEventListener('progress', (e) => {
       progress.value = e.loaded / e.total
@@ -21,6 +21,7 @@ form.addEventListener('submit', (e) => {
       alert('download defult, it was error ' + e)
    })
 
+   xhr.open('POST', URLServer);
    xhr.setRequestHeader('Content-type', 'aplication/x-www-form-urlencoded');
    xhr.send(JSON.stringify(data));
 });

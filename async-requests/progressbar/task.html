@@ -19,13 +19,13 @@
         </h1>
     </header>
     <main class="content">
-        <div class="card">
-            <progress value="0.0" id="progress"></progress>
-            <form action="https://netology-slow-rest.herokuapp.com/upload.php" id="form">
+         <div class="card">
+             <progress value="0.0" id="progress"></progress>
+            <form action="https://netology-slow-rest.herokuapp.com/upload.php" id="form" name="name">
                 <input type="file" name="file" id="file" required>
                 <label for="file">                                  
                     <span class="input__wrapper input__wrapper-button">Выберите файл</span>
-                    <span class="input__wrapper input__wrapper-desc">Имя файла...</span>                    
+                    <span class="input__wrapper input__wrapper-desc">Имя файла...</span>                   
                 </label>                
                 <button id="send">Отправить</button>
             </form>
