@@ -1,6 +1,6 @@
 const form = document.querySelector('#form');
 const progress = document.querySelector('#progress');
-const URLServer = "https://netology-slow-rest.herokuapp.com/upload.php"
+const URLServer = "https://netology-slow-rest.herokuapp.com/upload"
 
 form.addEventListener('submit', (e) => {
    e.preventDefault();
