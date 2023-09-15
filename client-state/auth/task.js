@@ -22,29 +22,8 @@ btn.addEventListener('click', (e) => {
          welcome.querySelector('#user_id').innerText = `${userID.user_id}`
          document.querySelectorAll('.control').forEach((item) => {
             item.value = "";
-         })         
+         })
       }
    })
    xhr.send(formData);
-})
-
-
-
-
-/* btn.addEventListener('click', (e) => {
-   e.preventDefault();
-   const formData = new FormData(signin);
-   const data = Object.fromEntries(formData);
-
-   fetch(url, {
-      method: 'POST',
-      headers: { "Content-Type", "application/x-www-form-urlencoded" },
-      body: JSON.stringify(data)
-   }).then(res => res.json())
-      .then(data => console.log(data))
-      .catch(error => console.log(error));
-}); 
-
-success: true
-user_id: 377
-*/
+});
