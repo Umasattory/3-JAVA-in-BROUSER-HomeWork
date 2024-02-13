@@ -1,6 +1,8 @@
+/*
 const form = document.querySelector('#form');
+
 const progress = document.querySelector('#progress');
-const URLServer = "https://netology-slow-rest.herokuapp.com/upload"
+const URLServer = "https://students.netoservices.ru/nestjs-backend/upload.php"
 
 form.addEventListener('submit', (e) => {
    e.preventDefault();
@@ -23,4 +25,4 @@ form.addEventListener('submit', (e) => {
    xhr.open('POST', URLServer);
    xhr.setRequestHeader('Content-type', 'aplication/x-www-form-urlencoded');
    xhr.send(JSON.stringify(data));
-});
+}); */
